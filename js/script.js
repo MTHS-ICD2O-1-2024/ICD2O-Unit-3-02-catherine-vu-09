@@ -13,7 +13,7 @@ function calculatePyramidVolume() {
             let b = parseFloat(document.getElementById('width').value);
             let h = parseFloat(document.getElementById('height').value);
             if (!isNaN(a) && !isNaN(b) && !isNaN(h)) {
-               let area = ((l*w*h) / 3) * h;
+               let area = ((l* w * h) / 3) * h;
                 document.getElementById('volume').innerText = `Volume is: ${area} mm²`;
             } else {
                 document.getElementById('volume').innerText = 'Please enter valid numbers';
