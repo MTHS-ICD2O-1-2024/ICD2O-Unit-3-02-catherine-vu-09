@@ -9,9 +9,9 @@
 */
 
 function calculatePyramidVolume() {
-            let a = parseFloat(document.getElementById('length-of-pyramid').value);
-            let b = parseFloat(document.getElementById('width-of-pyramid').value);
-            let h = parseFloat(document.getElementById('height-of-pyramid').value);
+            let a = parseFloat(document.getElementById('length').value);
+            let b = parseFloat(document.getElementById('width').value);
+            let h = parseFloat(document.getElementById('height').value);
             if (!isNaN(a) && !isNaN(b) && !isNaN(h)) {
                let area = ((l*w*h) / 3) * h;
                 document.getElementById('volume').innerText = `Volume is: ${area} mm²`;
