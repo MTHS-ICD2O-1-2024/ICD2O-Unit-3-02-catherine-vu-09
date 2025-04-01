@@ -9,13 +9,14 @@
 */
 
 function calculateVolume() {
-            let a = parseFloat(document.getElementById('length').value);
-            let b = parseFloat(document.getElementById('width').value);
-            let h = parseFloat(document.getElementById('height').value);
-            if (!isNaN(a) && !isNaN(b) && !isNaN(h)) {
-               let area = ((l* w * h) / 3) * h;
-                document.getElementById('volume').innerText = `Volume is: ${area} mm²`;
-            } else {
-                document.getElementById('volume').innerText = 'Please enter valid numbers';
-            }
-        }
+let l = parseFloat(document.getElementById('length').value);
+    let w = parseFloat(document.getElementById('width').value);
+    let h = parseFloat(document.getElementById('height').value);
+
+    if (!isNaN(l) && !isNaN(w) && !isNaN(h) && l > 0 && w > 0 && h > 0) {
+        let volume = (l * w * h) / 3;
+        document.getElementById('volume').innerText = `Volume is: ${volume.toFixed(2)} mm³`;
+    } else {
+        document.getElementById('volume').innerText = 'Please enter valid positive numbers';
+    }
+}
