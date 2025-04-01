@@ -35,19 +35,25 @@
       <br>
       <div class="page-content">Please enter integers for dimensions.</div>
       <div class="page-content">
-      <div class="formula">Formula: V = (l × w × h) / 3</div>
+<div class="formula">Formula: V = (l × w × h) / 3</div>
 
-        <form>
-          <div class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="length-number" step="0.01"/>
-            <label class="mdl-textfield__label" for="baseA"> Length (mm)</label>
-            <span class="mdl-textfield__error">Input is not a number.</span>
-          </div>
-          <br />
-          <div class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="width-number"step="0.01"/>
-            <label class="mdl-textfield__label" for="baseB"> Width (mm)</label>
-            <span class="mdl-textfield__error">Input is not a number.</span>
+<form onsubmit="event.preventDefault(); calculatePyramidVolume();">
+  <div class="mdl-textfield mdl-js-textfield">
+    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="length-number" step="0.01" />
+    <label class="mdl-textfield__label" for="length-number"> Length (mm)</label>
+    <span class="mdl-textfield__error">Input is not a number.</span>
+  </div>
+  <br />
+  <div class="mdl-textfield mdl-js-textfield">
+    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="width-number" step="0.01" />
+    <label class="mdl-textfield__label" for="width-number"> Width (mm)</label>
+    <span class="mdl-textfield__error">Input is not a number.</span>
+  </div>
+  <br />
+  <div class="mdl-textfield mdl-js-textfield">
+    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="height-number" step="0.01" />
+    <label class="mdl-textfield__label" for="height-number">Height (mm)</label>
+    <span class="mdl-textfield__error">Input is not a number.</span>
           </div>
           <br />
           <div class="mdl-textfield mdl-js-textfield">
@@ -62,7 +68,7 @@
           </button>
           <br />
           <div class="page-content-answer">
-            <div id="area"></div>
+            <div id="volume"></div>
           </div>
     </main>
   </div>
