@@ -8,7 +8,7 @@
 * Enter length, width and height
 */
 
-function calculatePyramidVolume() {
+function calculateVolume() {
             let a = parseFloat(document.getElementById('length').value);
             let b = parseFloat(document.getElementById('width').value);
             let h = parseFloat(document.getElementById('height').value);
