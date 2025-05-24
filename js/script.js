@@ -4,19 +4,36 @@
 // Created on: April 1 2025
 // This file contains the JS functions for index.html
 
+"use strict"
+
 /**
-* Enter length, width and height
+
+* This function calculates the area of a triangle.
+
 */
 
-function calculateVolume() {
-    let l = parseFloat(document.getElementById('length-number').value);
-        let w = parseFloat(document.getElementById('width-number').value);
-        let h = parseFloat(document.getElementById('height-number').value);
+function calculateVolumepyramid() {
+    // input
 
-        if (!isNaN(l) && !isNaN(w) && !isNaN(h) && l > 0 && w > 0 && h > 0) {
-            let volume = (l * w * h) / 3; // Correct pyramid volume formula
-            document.getElementById('volume').innerText = `Pyramid Volume: ${volume.toFixed(2)} mm³`;
-        } else {
-            document.getElementById('volume').innerText = 'Please enter valid positive numbers.';
-        }
-    }
+    const lengthOfPyramid = parseFloat(
+        document.getElementById("length-of-pyramid").value
+    )
+
+    const widthOfPyramid = parseFloat(
+        document.getElementById("width-of-pyramid").value
+    )
+
+    const heightOfPyramid = parseFloat(
+        document.getElementById("height-of-pyramid").value
+    )
+
+    // process
+
+    const volumeOfPyramid =
+        (lengthOfPyramid * widthOfPyramid * heightOfPyramid) / 3
+
+    // output
+
+    document.getElementById("answer").innerHTML =
+        "Volume is: " + volumeOfPyramid + " mm³"
+}
